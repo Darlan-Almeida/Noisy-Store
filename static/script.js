@@ -1,26 +1,40 @@
+var celular = document.getElementById("telefone")
 
-var emailInput = document.getElementById("email");
+celular.addEventListener("input", () => {
 
-email.onkeyup = function () {
-    if (!validarEmail()) {
-        emailInput.setCustomValidity("O domínio do e-mail não é permitido.");
-    }
-    else {
-        emailInput.setCustomValidity("");
+    // Remover os caracteres não numéricos usando a expressão regular /\D/g e limitar a 11 dígitos.
+    var limparValor = celular.value.replace(/\D/g, "").substring(0,11);
 
-    }
+    // Dividir a string em um array de caracteres individuais.
+    var numerosArray = limparValor.split("");
 
-}
-
-function validarEmail(event) {
-    var email = emailInput.value;
-    var allowedDomains = ["gmail.com", "outlook.com", "yahoo.com", "icloud.com", "hotmail.com", "aol.com", "protonmail.com", "mail.com", "zoho.com", "fastmail.com"];
-
-    var emailDomain = email.split('@')[1];
-
-    if (allowedDomains.indexOf(emailDomain) === -1) {
-        return false; // Impede o envio do formulário
+    // Criar a variável para receber o número formatado
+    var numeroFormatado = "";
+    
+    // Acessa o IF quando a quantidade de números é maior do que zero
+    if(numerosArray.length > 0){
+        // Formatar o DD e concatenar o valor
+        // slice - extraie uma parte do array
+        // join - unir os elementos do array em uma única string
+        numeroFormatado += `(${numerosArray.slice(0,2).join("")})`;
     }
 
-    return true; // Permite o envio do formulário
-}
+    // Acessa o IF quando a quantidade de números é maior do que dois
+    if(numerosArray.length > 2){
+        // Formatar o número do telefone e concatenar o valor
+        // slice - extraie uma parte do array
+        // join - unir os elementos do array em uma única string
+        numeroFormatado += ` ${numerosArray.slice(2,7).join("")}`;
+    }
+
+    // Acessa o IF quando a quantidade de números é maior do que sete
+    if(numerosArray.length > 7){
+        // Formatar o número do telefone e concatenar o valor
+        // slice - extraie uma parte do array
+        // join - unir os elementos do array em uma única string
+        numeroFormatado += `-${numerosArray.slice(7,11).join("")}`;
+    }
+
+    // Enviar para o campo o número formatado
+    celular.value = numeroFormatado;
+});

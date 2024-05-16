@@ -19,3 +19,8 @@ def inserir_dados(nome, email, telefone, cargo):
         return "usuario cadastrado"
     except:
         return "Erro"
+
+    
+def autenticacao(matricula, nome):
+    connection = pg8000.connect(**Config.DB_CONFIG)
+    cursor = connection.cursor()

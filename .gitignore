@@ -3,3 +3,4 @@ noisy_project
 __pycache___
 .gitignore
 teste.py
+myenv

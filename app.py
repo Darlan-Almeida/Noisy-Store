@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
 from controllers import bd_controller
-
+import jsonify
 
 app = Flask(__name__)
 
@@ -13,10 +13,10 @@ def index():
         cargo = request.form['cargo']
 
         try:
-            usuario = bd_controller.inserir_dados(nome, email, telefone, cargo)
-            return f"Nome: {nome}, E-mail: {email}, Telefone: {telefone}, Cargo: {cargo}"        
-        except:
-            return KeyError
+            result = bd_controller.inserir_dados(nome, email, telefone, cargo)
+            return 'Usuário Cadastrado'
+        except Exception as e:
+            return jsonify({"error": str(e)}), 500
 
     return render_template('home.html')
 @app.route('/admin', methods=['GET', 'POST'])

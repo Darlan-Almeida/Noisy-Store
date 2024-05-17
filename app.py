@@ -1,35 +1,44 @@
 from flask import Flask, render_template, request
 from controllers import bd_controller
 import jsonify
-from flask_limiter import Limiter
-from flask_limiter.util import get_remote_address
+from collections import defaultdict
+import time
+
 
 app = Flask(__name__)
-limiter = Limiter(
-    get_remote_address,
-    app=app,
-    default_limits=["200 per day", "50 per hour"],
-    storage_uri="memory://",
-)
+request_counts = defaultdict(list)
+
 
 @app.route('/', methods=['GET', 'POST'])
-@limiter.limit("10 per hour")
-@limiter.limit("20 per day")
 def index():
-    print(Limiter)
+    client_ip = request.remote_addr
+    current_time = time.time()
+    
+    # Limpe as requisições antigas (maximo de 05 requisições por hora)
+    
+    request_counts[client_ip] = [timestamp for timestamp in request_counts[client_ip] if current_time - timestamp < 3600]
+
+    print(request_counts)
+    
     if request.method == 'POST':
+        if len(request_counts[client_ip]) >= 5:
+            return "Limite de envio de formulário excedido"
+        
         nome = request.form['nome']
         email = request.form['email']
         telefone = request.form['telefone']
         cargo = request.form['cargo']
-
+        
         try:
             result = bd_controller.inserir_dados(nome, email, telefone, cargo)
+            # Adiciona o timestamp atual à lista de requisições deste IP
+            request_counts[client_ip].append(current_time)
             return 'Usuário Cadastrado'
         except Exception as e:
             return jsonify({"error": str(e)}), 500
 
     return render_template('home.html')
+
 @app.route('/admin', methods=['GET', 'POST'])
 def admin():
     if request.method == 'POST':

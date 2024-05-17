@@ -3,7 +3,8 @@ CREATE TABLE Clientes (
     nome VARCHAR(255),
     email VARCHAR(255),
     telefone VARCHAR(50),
-    cargo VARCHAR(100)
+    cargo VARCHAR(100),
+    data DATE DEFAULT CURRENT_DATE
 );
 
 CREATE TABLE Administradores (

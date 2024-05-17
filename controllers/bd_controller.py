@@ -1,6 +1,7 @@
 import pg8000
 from config import Config
 
+
 def inserir_dados(nome, email, telefone, cargo):
     try:
     

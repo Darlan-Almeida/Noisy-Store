@@ -1,11 +1,22 @@
 from flask import Flask, render_template, request
 from controllers import bd_controller
 import jsonify
+from flask_limiter import Limiter
+from flask_limiter.util import get_remote_address
 
 app = Flask(__name__)
+limiter = Limiter(
+    get_remote_address,
+    app=app,
+    default_limits=["200 per day", "50 per hour"],
+    storage_uri="memory://",
+)
 
 @app.route('/', methods=['GET', 'POST'])
+@limiter.limit("10 per hour")
+@limiter.limit("20 per day")
 def index():
+    print(Limiter)
     if request.method == 'POST':
         nome = request.form['nome']
         email = request.form['email']

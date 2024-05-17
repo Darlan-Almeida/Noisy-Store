@@ -1,6 +1,6 @@
 .env
 noisy_project
 __pycache___
-.gitignore
+*.gitignore
 teste.py
 myenv

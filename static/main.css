@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+:root {
+  --azul-escuro: #061429;
+  --azul-claro: #1289d9;
+  --verde: #abc52f;
+  --branco: #fff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.main {
+  height: 96px;
+  background-color: var(--azul-escuro);
+  display: flex;
+  justify-content: center;
+}
+
+.navbar {
+  width: 65%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.image {
+  height: 100%;
+}
+.image img {
+  height: 100%;
+}
+
+.navbar nav {
+  width: 60%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.navbar nav a {
+  text-decoration: none;
+  color: var(--branco);
+}
+
+.navbar nav a:hover {
+  color: var(--azul-claro);
+}
+
+.cadastro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid var(--verde);
+  border-radius: 20px;
+  width: 120px;
+  height: 60px;
+  cursor: pointer;
+  color: var(--verde);
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.cadastro:hover {
+  border: 3px solid var(--azul-claro);
+  color: var(--azul-claro);
+}
+
+.sec2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--verde);
+  height: 680px;
+  text-align: center;
+  color: var(--azul-escuro);
+}
+
+.sec2 img {
+  height: 500px;
+}
+
+.texto {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+  justify-content: center;
+  gap: 60px;
+  align-items: center;
+}
+
+.texto a {
+  text-decoration: none;
+  border: 3px solid var(--azul-escuro);
+  color: var(--azul-escuro);
+  border-radius: 20px;
+  width: 240px;
+  height: 50px;
+  cursor: pointer;
+  font-size: 25px;
+  font-weight: bold;
+  align-content: center;
+}
+
+.texto a:hover {
+  border: 3px solid var(--azul-claro);
+  color: var(--azul-claro);
+}

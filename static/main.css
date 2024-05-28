@@ -18,6 +18,8 @@ body {
   background-color: var(--azul-escuro);
   display: flex;
   justify-content: center;
+  position: fixed;
+  width: 100%;
 }
 
 .navbar {
@@ -30,7 +32,7 @@ body {
 .image {
   height: 100%;
 }
-.image img {
+.navbar img {
   height: 100%;
 }
 
@@ -40,19 +42,17 @@ body {
   justify-content: space-evenly;
 }
 
-.navbar nav a {
-  text-decoration: none;
+.navbar nav span {
+  cursor: pointer;
   color: var(--branco);
 }
 
-.navbar nav a:hover {
+.navbar nav span:hover {
   color: var(--azul-claro);
 }
 
 .cadastro {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: var(--azul-escuro);
   border: 3px solid var(--verde);
   border-radius: 20px;
   width: 120px;
@@ -68,7 +68,7 @@ body {
   color: var(--azul-claro);
 }
 
-.sec2 {
+#sec2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -76,9 +76,10 @@ body {
   height: 680px;
   text-align: center;
   color: var(--azul-escuro);
+  padding-top: 96px;
 }
 
-.sec2 img {
+#sec2 img {
   height: 500px;
 }
 
@@ -92,20 +93,296 @@ body {
   align-items: center;
 }
 
-.texto a {
-  text-decoration: none;
+.texto button {
   border: 3px solid var(--azul-escuro);
   color: var(--azul-escuro);
+  background-color: var(--verde);
   border-radius: 20px;
   width: 240px;
   height: 50px;
   cursor: pointer;
   font-size: 25px;
   font-weight: bold;
-  align-content: center;
 }
 
-.texto a:hover {
+.texto button:hover {
   border: 3px solid var(--azul-claro);
   color: var(--azul-claro);
+}
+
+#proposta {
+  background-color: var(--azul-escuro);
+  width: 100%;
+  display: flex;
+}
+
+.cadeiras {
+  width: 50%;
+}
+
+#proposta img {
+  width: 100%;
+}
+
+.texto_proposta {
+  margin-left: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 530px;
+}
+
+.texto_proposta h1 {
+  font-size: 32px;
+  color: var(--branco);
+}
+.texto_proposta p {
+  font-size: 20px;
+  text-align: justify;
+  color: var(--verde);
+}
+.texto_proposta button {
+  width: 150px;
+  height: 60px;
+  border-radius: 20px;
+  border: 3px solid var(--verde);
+  background-color: var(--azul-escuro);
+  color: var(--verde);
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.texto_proposta button:hover {
+  border: 3px solid var(--azul-claro);
+  color: var(--azul-claro);
+}
+
+#vantagens {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--verde);
+  align-items: center;
+}
+
+#vantagens h1 {
+  padding-top: 40px;
+  margin: 0;
+  text-align: center;
+  width: 40%;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--azul-escuro);
+}
+
+.todas_vantagens {
+  width: 80%;
+  margin-top: 70px;
+  display: grid;
+  grid-template-columns: 30% 30%;
+  justify-content: space-around;
+  text-align: center;
+  row-gap: 50px;
+}
+
+.todas_vantagens img {
+  width: 150px;
+}
+
+#vantagens button {
+  width: 150px;
+  height: 60px;
+  border-radius: 20px;
+  background-color: var(--verde);
+  border: 3px solid;
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  cursor: pointer;
+}
+
+#vantagens button:hover {
+  border: 3px solid var(--azul-claro);
+  color: var(--azul-claro);
+}
+
+#solucao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--azul-escuro);
+}
+
+#solucao h1 {
+  margin: 0;
+  padding-top: 50px;
+  border-bottom: 3px solid;
+  color: var(--branco);
+  width: 40%;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  margin-top: 50px;
+}
+
+.block {
+  display: flex;
+  width: 60%;
+}
+
+.block img {
+  width: 40%;
+}
+
+.solucao_texto {
+  color: var(--branco);
+  margin-left: 30px;
+}
+
+#solucao button {
+  width: 150px;
+  height: 60px;
+  border: 3px solid var(--branco);
+  background-color: var(--azul-escuro);
+  border-radius: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--branco);
+  margin-top: 50px;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+#solucao button:hover {
+  border: 3px solid var(--azul-claro);
+  color: var(--azul-claro);
+}
+
+#somos {
+  background-color: var(--verde);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#somos h1 {
+  margin: 0;
+  margin-top: 50px;
+  border-bottom: 3px solid;
+  width: 60%;
+  padding-bottom: 20px;
+}
+
+#somos p {
+  width: 80%;
+  margin-top: 40px;
+  font-size: 18px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+#somos button {
+  margin-top: 50px;
+  background-color: var(--verde);
+  border: 3px solid;
+  width: 190px;
+  height: 70px;
+  border-radius: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+#somos button:hover {
+  border: 3px solid var(--azul-claro);
+  color: var(--azul-claro);
+}
+
+#contato {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#contato {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--azul-claro);
+}
+
+#contato h1 {
+  margin: 0;
+  margin-top: 50px;
+  border-bottom: 3px solid;
+  width: 60%;
+  padding-bottom: 20px;
+  text-align: center;
+  color: var(--branco);
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 50px;
+  width: 70%;
+}
+
+.form label {
+  display: flex;
+  align-items: center;
+  padding: 15px 0;
+}
+.form span {
+  font-size: 18px;
+  color: var(--branco);
+  padding-right: 15px;
+}
+
+.form input {
+  width: 400px;
+  height: 40px;
+  border-radius: 10px;
+  border: 0;
+  font-size: 20px;
+  padding-left: 10px;
+}
+
+#contato button {
+  background-color: var(--azul-claro);
+  border: 3px solid var(--branco);
+  color: var(--branco);
+  font-size: 18px;
+  width: 150px;
+  height: 40px;
+  border-radius: 20px;
+  margin-top: 40px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+#contato button:hover {
+  border: 3px solid var(--azul-escuro);
+  color: var(--azul-escuro);
+}
+
+.email {
+  display: flex;
+  height: 80px;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--azul-escuro);
+  color: var(--branco);
 }

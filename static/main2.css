@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+*{
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+:root {
+  font-size:62.5%; /* 1rem = 10px*/
+  --azul-escuro: #061429;
+  --azul-claro: #1289d9;
+  --verde: #abc52f;
+  --branco: #fff;
+}
+
+/* classes utilitárias*/
+
+.full-screen{
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--verde);
+}
+
+/* fim das classes utilitárias*/
+html{
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+}
+
+.main {
+  position: sticky;
+  top: 0px;
+  z-index: 2;
+  height: 9.6rem;
+  background-color: var(--azul-escuro);
+  display: flex;
+  justify-content: center;
+}
+
+.navbar {
+  width: 65%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.image {
+  height: 100%;
+}
+.image img {
+  height: 100%;
+}
+
+.navbar nav {
+  width: 60%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.navbar nav a {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: var(--branco);
+  transition-duration: 0.5s;
+}
+
+.navbar nav a:hover {
+  color: var(--azul-claro);
+}
+
+.cadastro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.3rem solid var(--verde);
+  border-radius: 20px;
+  width: 12rem;
+  height: 6rem;
+  cursor: pointer;
+  color: var(--verde);
+  font-size: 2.2rem;
+  font-weight: bold;
+  transition-duration: 0.5s;
+}
+
+.cadastro:hover {
+  border: 0.3rem solid var(--azul-claro);
+  color: var(--azul-claro);
+  scale: 1.01;
+
+}
+
+.sec2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--verde);
+  height: 68rem;
+  text-align: center;
+  color: var(--azul-escuro);
+}
+
+.sec2 img {
+  height: 50rem;
+  translate: 0px -8rem;
+}
+
+.texto {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+  justify-content: center;
+  gap: 6rem;
+  align-items: center;
+}
+
+.texto a {
+  text-decoration: none;
+  border: 0.3rem solid var(--azul-escuro);
+  color: var(--azul-escuro);
+  border-radius: 2rem;
+  width: 24rem;
+  height: 5rem;
+  cursor: pointer;
+  font-size: 2.5rem;
+  font-weight: bold;
+  align-content: center;
+  transition-duration: .5s;
+}
+
+.texto a:hover {
+  border: 0.3rem solid var(--azul-claro);
+  color: var(--azul-claro);
+  scale: 1.01;
+}
+#sobre{
+   display: flex;
+   flex-direction: row;
+}
+#sobre img{
+  align-self: flex-end;
+  height: 90%;
+  width: 50%;
+  box-shadow: 0rem 0rem 0.4rem black;
+  border-radius: 0.5rem;
+}
+#sec-sobre-descrição{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width:50%;
+  height: 100vh;
+  gap: 2rem;
+}
+#sec-sobre-descrição h1{
+  font-size: 5rem;
+  font-family: 'Roboto',sans-serif;
+  font-variant: small-caps;
+  width: 90%;
+  text-align: center;
+  border-bottom: 0.2rem solid white;
+}
+#sec-sobre-descrição p{
+  align-self: center;
+  font-size: 2rem;
+  width: 90%;
+  text-align: justify;
+  font-family:"Roboto", sans-serif ;
+  line-height: 4rem;
+}
+#sec-sobre-descrição p span{
+  color: var(--branco);
+  text-shadow: 0rem 0rem 0.4rem rgba(0, 0, 0, 0.288);
+}
+#sec-sobre-descrição a{
+  font-size: 2rem;
+  text-decoration: none;
+  align-self: center;
+  text-decoration: none;
+  color: var(--azul-escuro);
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 0.2rem solid var(--azul-escuro);
+  transition-duration: .5s;
+}
+#sec-sobre-descrição a:hover{
+  border-color:var(--azul-claro);
+  color: var(--azul-claro);
+}
+#vantagens{
+  display: flex;
+  flex-direction: column;
+}
+#vantagens h1{
+  width: 100vw;
+  font-size: 5rem;
+  text-align: center;
+  padding-top: 9.6rem;
+  font-variant: small-caps;
+  border-bottom: 0.2rem solid white;
+
+}

@@ -5,34 +5,185 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Noisy Monitory</title>
     <link rel="stylesheet" href="../static/main.css" />
+    <link rel="shortcut icon" href="../static/images/n.ico" type="image/x-icon">
   </head>
   <body>
     <div class="main">
       <div class="navbar">
-        <a href="" class="image">
-          <img
-            src="../static/images/logo_normal_maior.png"
-            alt="Logo Noisy Monitory"
-          />
-        </a>
+        <img
+          src="../static/images/logo_normal_maior.png"
+          alt="Logo Noisy Monitory"
+        />
+
         <nav>
-          <a href="">Início</a>
-          <a href="">Sobre</a>
-          <a href="">Vantagens</a>
-          <a href="">Solução</a>
-          <a href="">Quem Somos</a>
-          <a href="">Contato</a>
+          <span onclick="descer('sec2')">Início</span>
+          <span onclick="descer('proposta')">Sobre</span>
+          <span onclick="descer('vantagens')">Vantagens</span>
+          <span onclick="descer('solucao')">Solução</span>
+          <span onclick="descer('somos')">Quem Somos</span>
+          <span onclick="descer('contato')">Contato</span>
         </nav>
-        <a class="cadastro">Cadastro</a>
+        <button class="cadastro">Cadastro</button>
       </div>
     </div>
 
-    <div class="sec2">
+    <div id="sec2">
       <div class="texto">
         <h1>PLATAFORMA DE MONITORAMENTO DE RUÍDOS PARA FINS ACADÊMICOS</h1>
-        <a href="">Conheça o projeto</a>
+        <button onclick="descer('proposta')">Conheça o projeto</button>
       </div>
       <img src="../static/images/img_tmp.jpg" alt="" />
     </div>
+
+    <div id="proposta">
+      <div class="cadeiras">
+        <img src="../static/images/salaDeAula-section-sobre.jpg" alt="" />
+      </div>
+      <div class="texto_proposta">
+        <h1>NOSSA PROPOSTA</h1>
+        <p>
+          O noisy monitory é uma plataforma de monitoramento de ruídos focado no
+          âmbito acadêmico, trabalhamos com geraração de relatórios que ajude na
+          gestão de barulhos emitidos em salas de aulas, assim melhorando o
+          aprendizado dos alunos e, principalmente, alunos com algum problema de
+          sensibilidade.
+          <br />
+          <br />
+          Nosso software foi desenvolvido por alunos de ensino superior, assim
+          vivenciando de fato como funciona uma sala de aula e como os ruídos
+          podem prejudicar um aluno sensível.
+        </p>
+        <button onclick="descer('vantagens')">Veja mais</button>
+      </div>
+    </div>
+
+    <div id="vantagens">
+      <h1>VANTAGENS</h1>
+      <div class="todas_vantagens">
+        <div>
+          <img src="../static/images/relatorio.png" alt="" />
+          <h3>MAIOR CONTROLE DOS RUÍDOS</h3>
+          <p>
+            Nossa plataforma proporicona uma vista administrativa de todas as
+            informações necessárias.
+          </p>
+        </div>
+        <div>
+          <img src="../static/images/melhoria.png" alt="" />
+          <h3>MELHORIA DO AMBIENTE ESCOLAR</h3>
+          <p>
+            Com o auxílio da nossa plataforma as instituições poderão tomar
+            medidas para melhorar o ensino e aprendizagem dos alunos.
+          </p>
+        </div>
+        <div>
+          <img src="../static/images/relatorio.png" alt="" />
+          <h3>MAIOR CONTROLE</h3>
+          <p>
+            Nossa plataforma proporicona uma vista administrativa de todas as
+            informações necessárias
+          </p>
+        </div>
+        <div>
+          <img src="../static/images/relatorio.png" alt="" />
+          <h3>MAIOR CONTROLE</h3>
+          <p>
+            Nossa plataforma proporicona uma vista administrativa de todas as
+            informações necessárias
+          </p>
+        </div>
+      </div>
+      <button onclick="descer('solucao')">Veja mais</button>
+    </div>
+
+    <div id="solucao">
+      <h1>SOLUÇÃO</h1>
+      <div class="container">
+        <div class="block">
+          <img src="../static/images/salaDeAula-section-sobre.jpg" alt="" />
+          <div class="solucao_texto">
+            <h3>PARA QUEM É INDICADO?</h3>
+            <p>
+              Nossa plataforma é indicada principalmente para instituições de
+              ensino, mas nada impede de instituições privadas de utilizar.
+            </p>
+          </div>
+        </div>
+        <div class="block">
+          <img src="../static/images/salaDeAula-section-sobre.jpg" alt="" />
+          <div class="solucao_texto">
+            <h3>PARA QUEM É INDICADO?</h3>
+            <p>
+              Nossa plataforma é indicada principalmente para instituições de
+              ensino, mas nada impede de instituições privadas de utilizar.
+            </p>
+          </div>
+        </div>
+        <div class="block">
+          <img src="../static/images/salaDeAula-section-sobre.jpg" alt="" />
+          <div class="solucao_texto">
+            <h3>PARA QUEM É INDICADO?</h3>
+            <p>
+              Nossa plataforma é indicada principalmente para instituições de
+              ensino, mas nada impede de instituições privadas de utilizar.
+            </p>
+          </div>
+        </div>
+      </div>
+      <button onclick="descer('somos')">Veja mais</button>
+    </div>
+
+    <div id="somos">
+      <h1>QUEM SOMOS</h1>
+      <p>
+        O projeto da AvaliaSmart surgiu em 2019 por um de nossos fundadores
+        enquanto estudava o assunto e criou um algoritmo de Inteligência
+        Artificial, capaz de realizar a correção de questões discursivas em
+        língua portuguesa. Algo completamente inovador no cenário brasileiro.
+      </p>
+      <p class="bold">
+        Com o apoio de programas voltados para o empreendedorismo e o ambiente
+        de inovação no Estado do Paraná, começamos a planejar uma solução capaz
+        de auxiliar a educação brasileira.
+      </p>
+      <p>
+        Pensando nisso, nós da AvaliaSmart, desenvolvemos uma solução baseada
+        nessa inteligência artificial, capaz de transformar e facilitar o dia a
+        dia de instituições de ensino que necessitam realizar correções de
+        provas e trabalhos com questões discursivas, liberando o tempo de seus
+        professores para atividades prioritárias para o ensino. Tudo isso com
+        segurança, agilidade e integridade.
+      </p>
+      <p class="bold">
+        Somos três amigos, apaixonados por tecnologia, inovação e educação.
+        Acreditamos no poder transformador que a educação possui.
+      </p>
+      <button onclick="descer('contato')">Fale conosco</button>
+    </div>
+
+    <div id="contato">
+      <h1>CONTATO</h1>
+      <div class="form">
+        <label for=""> <span>Nome</span><input type="text" /> </label>
+        <label for=""> <span>Cargo</span><input type="text" /> </label>
+        <label for=""> <span>E-mail</span><input type="text" /> </label>
+        <label for=""> <span>Telefone</span><input type="text" /> </label>
+      </div>
+      <button>ENVIAR</button>
+    </div>
+
+    <div class="email">
+      <h4>Email@gmail.com</h4>
+    </div>
+    <script>
+      const descer = (div) => {
+        var myDiv = document.getElementById(div);
+        var offsetTop = myDiv.offsetTop;
+        window.scrollTo({
+          top: offsetTop - 96,
+          behavior: "smooth",
+        });
+      };
+    </script>
   </body>
 </html>

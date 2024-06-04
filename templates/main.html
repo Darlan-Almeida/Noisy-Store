@@ -105,7 +105,7 @@
         <div>
           <img src="../static/images/relatorio.png" alt="" />
           <h3>EXEMPLO</h3>
-          <p>dajdawjdioawjdiajdowaoIJAIOJjawdoandowaindoawno</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci voluptate sint quidem similique eligendi asperiores eaque quibusdam inventore optio voluptatibus repellendus suscipit, qui id neque pariatur quisquam, debitis placeat! Quidem?</p>
         </div>
       </div>
       <button onclick="descer('solucao')">Veja mais</button>
@@ -119,8 +119,7 @@
           <div class="solucao_texto">
             <h3>PARA QUEM É INDICADO?</h3>
             <p>
-              Nossa plataforma é indicada principalmente para instituições de
-              ensino, mas nada impede da utilização em outros meios.
+             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur adipisci modi illo, quod ipsam est aperiam tenetur quos accusantium asperiores doloremque eos ea expedita eius quibusdam voluptatem enim sint accusamus.
             </p>
           </div>
         </div>
@@ -129,9 +128,7 @@
           <div class="solucao_texto">
             <h3>COMO FAREMOS ISSO?</h3>
             <p>
-              Nossa plataforma trabalha com tecnologia de ponta e uma fácil
-              usabilidade do sistema, sempre tendo uma equipe para axuliar em
-              qualquer dúvida que venha a surgir.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore unde assumenda dolorum quod veritatis laborum repellat mollitia, asperiores laboriosam, quibusdam, odit molestias dignissimos nam! Earum unde quam ipsam dolores repudiandae.
             </p>
           </div>
         </div>
@@ -140,8 +137,7 @@
           <div class="solucao_texto">
             <h3>PARA QUEM É INDICADO?</h3>
             <p>
-              Nossa plataforma é indicada principalmente para instituições de
-              ensino, mas nada impede de instituições privadas de utilizar.
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui ex vel quae cupiditate dolores necessitatibus perspiciatis? Laboriosam eveniet, fugiat quaerat reprehenderit nisi fuga modi neque. Blanditiis consectetur mollitia culpa similique?
             </p>
           </div>
         </div>
@@ -152,26 +148,15 @@
     <div id="somos">
       <h1>QUEM SOMOS</h1>
       <p>
-        O projeto da AvaliaSmart surgiu em 2019 por um de nossos fundadores
-        enquanto estudava o assunto e criou um algoritmo de Inteligência
-        Artificial, capaz de realizar a correção de questões discursivas em
-        língua portuguesa. Algo completamente inovador no cenário brasileiro.
-      </p>
+       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut voluptatibus tempore voluptatem quibusdam quod repellendus quisquam quos eaque beatae natus corrupti autem, mollitia neque, omnis, dolor sequi consectetur perspiciatis amet?
       <p class="bold">
-        Com o apoio de programas voltados para o empreendedorismo e o ambiente
-        de inovação no Estado do Paraná, começamos a planejar uma solução capaz
-        de auxiliar a educação brasileira.
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam tempora accusantium fugit inventore voluptas molestiae unde delectus dolorem. Consectetur pariatur eius ratione suscipit soluta omnis autem, reprehenderit minus animi asperiores!
       </p>
       <p>
-        Pensando nisso, nós da AvaliaSmart, desenvolvemos uma solução baseada
-        nessa inteligência artificial, capaz de transformar e facilitar o dia a
-        dia de instituições de ensino que necessitam realizar correções de
-        provas e trabalhos com questões discursivas, liberando o tempo de seus
-        professores para atividades prioritárias para o ensino. Tudo isso com
-        segurança, agilidade e integridade.
+       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos temporibus nulla, itaque vitae delectus distinctio minus cumque quam molestiae. Enim minima ipsa autem delectus earum. Rerum sed nulla beatae tempore.
       </p>
       <p class="bold">
-        Somos três amigos, apaixonados por tecnologia, inovação e educação.
+        Somos quatro amigos, apaixonados por tecnologia, inovação e educação.
         Acreditamos no poder transformador que a educação possui.
       </p>
       <button onclick="descer('contato')">Fale conosco</button>
@@ -180,16 +165,41 @@
     <div id="contato">
       <h1>CONTATO</h1>
       <div class="form">
-        <label for=""> <span>Nome</span><input type="text" /> </label>
-        <label for=""> <span>Cargo</span><input type="text" /> </label>
-        <label for=""> <span>E-mail</span><input type="text" /> </label>
-        <label for=""> <span>Telefone</span><input type="text" /> </label>
+        <form method="POST">
+          <div class="form-group">
+              <label for="nome">Nome</label>
+              <input type="text" id="nome" name="nome" required>
+          </div>
+          <div class="form-group">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+              <label for="telefone">Número de telefone</label>
+              <input type="tel" id="telefone" name="telefone" required>
+          </div>
+          <div class="form-group">
+              <label for="cargo">Cargo na escola</label>
+              <select id="cargo" name="cargo" required>
+                  <option value="">Selecione um cargo</option>
+                  <option value="diretor">Diretor</option>
+                  <option value="vice-diretor">Vice-Diretor</option>
+                  <option value="coordenador">Coordenador</option>
+                  <option value="professor">Professor</option>
+                  <option value="assistente-administrativo">Assistente Administrativo</option>
+                  <option value="orientador-educacional">Orientador Educacional</option>
+              </select>
+          </div>
+          
+          <div class="form-group">
+              <button type="submit">Enviar</button>
+          </div>
+      </form>
       </div>
-      <button>ENVIAR</button>
     </div>
 
     <div class="email">
-      <h4>Email@gmail.com</h4>
+      <h4>noysimonitory@outlook.com</h4>
     </div>
     <script>
       const descer = (div) => {

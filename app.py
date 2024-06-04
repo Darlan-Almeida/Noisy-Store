@@ -37,7 +37,7 @@ def index():
         except Exception as e:
             return jsonify({"error": str(e)}), 500
 
-    return render_template('home.html')
+    return render_template('main.html')
 
 @app.route('/admin', methods=['GET', 'POST'])
 def admin():

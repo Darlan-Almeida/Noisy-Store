@@ -1,6 +1,6 @@
 import pg8000
 from urllib.parse import urlparse
-from config import Config
+from config import Config 
 
 try:    
     connection = pg8000.connect(**Config.DB_CONFIG)

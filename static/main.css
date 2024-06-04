@@ -20,6 +20,7 @@ body {
   justify-content: center;
   position: fixed;
   width: 100%;
+  border-bottom: 1px solid var(--verde);
 }
 
 .navbar {
@@ -81,6 +82,7 @@ body {
 
 #sec2 img {
   height: 500px;
+  margin-right: 150px;
 }
 
 .texto {
@@ -91,6 +93,11 @@ body {
   justify-content: center;
   gap: 60px;
   align-items: center;
+}
+
+.texto h1 {
+  line-height: 2;
+  font-size: 35px;
 }
 
 .texto button {

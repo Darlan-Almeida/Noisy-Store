@@ -173,12 +173,12 @@ body {
 }
 
 #vantagens h1 {
-  padding-top: 40px;
+  padding-top: 50px;
   margin: 0;
   text-align: center;
   width: 40%;
   padding-bottom: 20px;
-  border-bottom: 1px solid var(--azul-escuro);
+  border-bottom: 3px solid;
 }
 
 .todas_vantagens {
@@ -235,7 +235,7 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 50px;
-  margin-top: 50px;
+  margin-top: 80px;
 }
 
 .block {
@@ -252,6 +252,12 @@ body {
   margin-left: 30px;
 }
 
+.solucao_texto p {
+  text-align: justify;
+  margin-top: 40px;
+  line-height: 28px;
+}
+
 #solucao button {
   width: 150px;
   height: 60px;
@@ -261,7 +267,7 @@ body {
   font-size: 24px;
   font-weight: bold;
   color: var(--branco);
-  margin-top: 50px;
+  margin-top: 60px;
   margin-bottom: 30px;
   cursor: pointer;
 }
@@ -281,10 +287,11 @@ body {
 
 #somos h1 {
   margin: 0;
-  margin-top: 50px;
+  padding-top: 50px;
   border-bottom: 3px solid;
-  width: 60%;
+  width: 40%;
   padding-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 #somos p {
@@ -332,7 +339,7 @@ body {
   margin: 0;
   margin-top: 50px;
   border-bottom: 3px solid;
-  width: 60%;
+  width: 40%;
   padding-bottom: 20px;
   text-align: center;
   color: var(--branco);

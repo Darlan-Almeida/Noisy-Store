@@ -400,3 +400,16 @@ body {
   background-color: var(--azul-escuro);
   color: var(--branco);
 }
+
+/* ALTERAÇÕES PRA AUXILIAR NA VERSÃO MOBILE*/
+
+#container-icone-menu{
+  display: none;
+}
+#icone-menu{
+  display: none;
+}
+
+
+
+/*FIM DAS ALTERAÇÕES*/

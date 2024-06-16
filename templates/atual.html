@@ -10,6 +10,8 @@
       href="../static/images/logo3.ico"
       type="image/x-icon"
     />
+    <link rel="stylesheet" href="../static/versaoMobile.css" media="screen and (max-width: 768px)">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   </head>
   <body>
     <div class="main">
@@ -18,7 +20,9 @@
           src="../static/images/logo_normal_maior.png"
           alt="Logo Noisy Monitory"
         />
-
+       <div id="container-icone-menu">
+        <i id="icone-menu" class="material-symbols-outlined">menu</i>
+      </div>
         <nav>
           <span onclick="descer('sec2')">Início</span>
           <span onclick="descer('proposta')">Sobre</span>
@@ -268,6 +272,28 @@
       };
 
       $("#telefone").mask("(00) 0 0000-0000");
+
+
+      // JS PRA FAZER O MENU FUNCIONAR
+       
+      const iconeMenu = document.querySelector("#icone-menu")
+      const nav = document.querySelector("nav")
+      const containerMenu = document.querySelector("#container-icone-menu")
+
+      if(window.innerWidth <= 768){
+        nav.style.display = "none"
+      }
+      containerMenu.addEventListener("click", () => {
+        if(nav.style.display == "none"){
+          nav.style.display = 'flex'
+        }
+        else{
+          nav.style.display = 'none'
+        }
+      })
+
+      // JS DO MENU FINALIZADO
+
     </script>
   </body>
 </html>

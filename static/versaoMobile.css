@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+:root {
+  --azul-escuro: #061429;
+  --azul-claro: #1289d9;
+  --verde: #abc52f;
+  --branco: #fff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+}
+.navbar{
+    flex-direction: column;
+    align-items: center;
+}
+#container-icone-menu{
+  width: 100vw;
+  height: 30px;
+  background-color: var(--azul-escuro);
+  display:flex;
+  padding: 4px 0px;
+  justify-content: center;
+  border-top: 1px solid var(--branco);
+  border-bottom: 1px solid var(--branco);
+}
+#icone-menu{
+  color: var(--branco);
+  display: block;
+  scale: 1.3;
+}
+nav{
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    width: 100vw;
+    align-items: center;
+}
+nav span{
+    height: 32px;
+    background-color: var(--azul-escuro);
+    width: 100vw;
+    line-height: 2rem;
+    border-bottom: 1px solid var(--branco);
+}
+nav span:nth-child(1){
+    border-top: 1px solid var(--branco);
+}
+#sec2{
+  flex-direction: column-reverse;
+  align-items: center;
+  height: 580px;
+  gap: 0px;
+}
+.texto{
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+}
+#sec2 h1{
+  font-size: 25px;
+  width: 80vw;
+  line-height: 45px;
+  
+}
+#sec2 img{
+  display: block;
+  width: 150px;
+  height: 150px;
+  align-self: center;
+  margin: 0px;
+  margin-top: 90px;
+}
+.texto button{
+  font-size: 20px;
+  width: 200px;
+  height: 45px;
+}

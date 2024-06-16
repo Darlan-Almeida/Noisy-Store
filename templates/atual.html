@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="../static/versaoMobile.css" media="screen and (max-width: 768px)">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   </head>
-  <body>
+  <body onresize="mudoutamanho()">
     <div class="main">
       <div class="navbar">
         <img
@@ -29,8 +29,8 @@
           <span onclick="descer('vantagens')">Vantagens</span>
           <span onclick="descer('solucao')">Solução</span>
           <span onclick="descer('somos')">Quem Somos</span>
+          <button onclick="descer('contato')" class="cadastro">Contato</button>
         </nav>
-        <button onclick="descer('contato')" class="cadastro">Contato</button>
       </div>
     </div>
 
@@ -207,21 +207,6 @@
     <div id="contato">
       <h1>CONTATO</h1>
       <div class="form">
-<<<<<<< HEAD
-        <label for="">
-          <span>Nome</span><input type="text" autocomplete="off" />
-        </label>
-        <label for="">
-          <span>Cargo</span><input type="text" autocomplete="off" />
-        </label>
-        <label for="">
-          <span>E-mail</span><input type="text" autocomplete="off" />
-        </label>
-        <label for="">
-          <span>Telefone</span
-          ><input type="text" id="telefone" autocomplete="off" />
-        </label>
-=======
         <form method="POST">
           <div class="form-group">
               <label for="nome">Nome</label>
@@ -252,7 +237,6 @@
               <button type="submit">Enviar</button>
           </div>
       </form>
->>>>>>> 24b18699840255bc004f8c1ff446e6ce391f91a4
       </div>
     </div>
 
@@ -275,14 +259,24 @@
 
 
       // JS PRA FAZER O MENU FUNCIONAR
-       
       const iconeMenu = document.querySelector("#icone-menu")
       const nav = document.querySelector("nav")
       const containerMenu = document.querySelector("#container-icone-menu")
-
+      
       if(window.innerWidth <= 768){
-        nav.style.display = "none"
+        nav.style.display = 'none'
       }
+
+      function mudoutamanho(){
+        if(window.innerWidth <= 768){
+          nav.style.display = 'none'
+        }
+        else{
+          nav.style.display = 'flex'
+        }
+      }
+      
+
       containerMenu.addEventListener("click", () => {
         if(nav.style.display == "none"){
           nav.style.display = 'flex'

@@ -26,6 +26,7 @@ body {
   justify-content: center;
   border-top: 1px solid var(--branco);
   border-bottom: 1px solid var(--branco);
+  cursor: pointer;
 }
 #icone-menu{
   color: var(--branco);
@@ -78,4 +79,28 @@ nav span:nth-child(1){
   font-size: 20px;
   width: 200px;
   height: 45px;
+}
+#proposta{
+  height: calc(100vh - 96px);
+}
+.texto_proposta{
+  margin: 0px;
+  width: 100vw;
+  align-items: center;
+}
+.texto_proposta p{
+  width: 93vw;
+}
+.texto_proposta h1{
+  width: 100vw;
+  text-align: center;
+}
+.cadeiras{
+  display: none;
+}
+
+/*Daqui pra baixo é o css da seção "contato" */
+
+#contato input{
+  width: 80vw;
 }
